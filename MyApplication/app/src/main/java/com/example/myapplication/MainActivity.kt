@@ -32,8 +32,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.nextButton -> {
-                index += 1
-                photoImageView.setImageResource(PHOTO_RES_IDS[index])
+                //配列がループされるように条件分岐
+                if (index < PHOTO_RES_IDS + 1) {
+                    index += 1
+                    photoImageView.setImageResource(PHOTO_RES_IDS[index])
+                } else {
+                    index = 0
+                }
+
             }
 
             R.id.backButton -> {
