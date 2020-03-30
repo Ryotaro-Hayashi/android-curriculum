@@ -11,4 +11,10 @@
         android:layout_height="300dp"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/italy" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="この写真を開く" />
 </LinearLayout>
