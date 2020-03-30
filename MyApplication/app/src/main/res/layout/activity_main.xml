@@ -6,14 +6,14 @@
     android:orientation="vertical" >
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/photoImageView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/italy" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/openButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="この写真を開く" />
@@ -24,14 +24,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="戻る" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/nextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
