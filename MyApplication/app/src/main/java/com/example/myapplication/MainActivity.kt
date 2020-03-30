@@ -3,7 +3,7 @@ package com.example.myapplication
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     //スライドショーで表示する画像の配列
     private val PHOTO_RES_IDS = intArrayOf(R.drawable.italy, R.drawable.london, R.drawable.paris)
@@ -20,6 +20,9 @@ class MainActivity : AppCompatActivity() {
         openButton.setOnClickListener(this)
         backButton.setOnClickListener(this)
         nextButton.setOnClickListener(this)
+    }
+
+    override fun onClick(v: View?) {
 
     }
 }
