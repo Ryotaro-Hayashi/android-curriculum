@@ -32,7 +32,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.nextButton -> {
-
+                index += 1
+                photoImageView.setImageResource(PHOTO_RES_IDS[index])
             }
 
             R.id.backButton -> {
