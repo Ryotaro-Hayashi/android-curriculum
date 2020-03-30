@@ -15,7 +15,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        
+        //画像やボタンがタップされる
+        photoImageView.setOnClickListener(this)
+        openButton.setOnClickListener(this)
+        backButton.setOnClickListener(this)
+        nextButton.setOnClickListener(this)
 
     }
 }
