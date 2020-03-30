@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -23,6 +24,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
+        when (v?.id) {
+            //openButtonを押した時の処理
+            R.id.openButton -> {
 
+            }
+
+            R.id.nextButton -> {
+
+            }
+
+            R.id.backButton -> {
+
+            }
+        }
     }
 }
