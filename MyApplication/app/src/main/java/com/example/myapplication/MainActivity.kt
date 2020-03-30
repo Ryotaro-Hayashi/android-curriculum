@@ -1,9 +1,9 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import android.view.View
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.backButton -> {
-
+                index -= 1
+                photoImageView.setImageResource(PHOTO_RES_IDS[index])
             }
         }
     }
