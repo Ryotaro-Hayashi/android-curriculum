@@ -25,6 +25,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         val randomResult = Random().nextInt(FORTUNE_IMAGES.size)
-
+        fortuneImageView.setImageResource(FORTUNE_IMAGES[randomResult])
     }
 }
