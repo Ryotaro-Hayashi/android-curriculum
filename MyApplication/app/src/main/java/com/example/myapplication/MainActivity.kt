@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var index = 0
 
     // 詳細画面で表示する写真の説明文の配列の定数
-    private val PHOTO_DESCRIPTION = arrayOf("イタリア", "ロンドン", "パリ")
+    private val PHOTO_DESCRIPTIONS = arrayOf("イタリア", "ロンドン", "パリ")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
