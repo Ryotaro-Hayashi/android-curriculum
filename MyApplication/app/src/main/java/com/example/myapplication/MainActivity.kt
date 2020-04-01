@@ -26,24 +26,33 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            //openButtonを押した時の処理
+            //開くボタン
             R.id.openButton -> {
 
             }
 
+            //進むボタン
             R.id.nextButton -> {
                 //配列がループされるように条件分岐
-                if (index < PHOTO_RES_IDS + 1) {
+                if (index < PHOTO_RES_IDS.size - 1) {
                     index += 1
-                    photoImageView.setImageResource(PHOTO_RES_IDS[index])
                 } else {
                     index = 0
                 }
 
+                //photoImageViewに写真を表示する
+                photoImageView.setImageResource(PHOTO_RES_IDS[index])
             }
 
+            //戻るボタン
             R.id.backButton -> {
-                index -= 1
+                if (index > 0) {
+                    index -= 1
+                } else {
+                    index = PHOTO_RES_IDS.size - 1
+                }
+
+                //photoImageViewに写真を表示する
                 photoImageView.setImageResource(PHOTO_RES_IDS[index])
             }
         }
