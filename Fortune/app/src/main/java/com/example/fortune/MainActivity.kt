@@ -6,6 +6,8 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 //　クリック処理を書くために必要
 import android.view.View
+// Random()を使用するために必要
+import java.util.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(view: View) {
+        val randomResult = Random().nextInt(FORTUNE_IMAGES.size)
 
     }
 }
