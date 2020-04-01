@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         R.drawable.omikuji_chuukichi, R.drawable.omikuji_kichi,R.drawable.omikuji_syoukichi,
         R.drawable.omikuji_suekichi,  R.drawable.omikuji_kyou, R.drawable.omikuji_daikyou)
 
+    // おみくじが引かれているかを表す状態
+    private val isDrawn = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
