@@ -10,4 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         app:srcCompat="@drawable/omikuji" />
+
+    <Button
+        android:id="@+id/drawButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="おみくじを引く" />
 </LinearLayout>
