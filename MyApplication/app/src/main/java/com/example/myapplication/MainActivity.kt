@@ -13,6 +13,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     //今どの画像を表示しているかを管理するためのメンバ変数
     private var index = 0
 
+    // 詳細画面で表示する写真の説明文の配列の定数
+    private val PHOTO_DESCRIPTION = arrayOf("イタリア", "ロンドン", "パリ")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
