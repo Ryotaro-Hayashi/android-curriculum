@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+// 画面遷移の際にデータを渡すために必要
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity

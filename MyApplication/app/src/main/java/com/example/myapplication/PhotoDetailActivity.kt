@@ -2,6 +2,8 @@ package com.example.myapplication
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+// layoutをインポート
+import kotlinx.android.synthetic.main.activity_photo_detail.*
 
 class PhotoDetailActivity : AppCompatActivity() {
 
