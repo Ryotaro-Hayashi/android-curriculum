@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 // レイアウトをインポート
 import kotlinx.android.synthetic.main.activity_main.*
+//　クリック処理を書くために必要
+import android.view.View
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     // おみくじ結果画像の配列
     private val FORTUNE_IMAGES = intArrayOf(R.drawable.omikuji_daikichi,
