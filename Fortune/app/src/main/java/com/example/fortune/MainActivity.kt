@@ -16,8 +16,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         R.drawable.omikuji_chuukichi, R.drawable.omikuji_kichi,R.drawable.omikuji_syoukichi,
         R.drawable.omikuji_suekichi,  R.drawable.omikuji_kyou, R.drawable.omikuji_daikyou)
 
-    // おみくじが引かれているかを表す状態
-    private val isDrawn = false
+    // おみくじが引かれているかを表す変数
+    private var isDrawn = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,5 +29,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View) {
         val randomResult = Random().nextInt(FORTUNE_IMAGES.size)
         fortuneImageView.setImageResource(FORTUNE_IMAGES[randomResult])
+
+        if (isDrawn == true) {
+            fortuneImageView.setImageResource(R.drawable.omikuji)
+            drawButton.text = "おみくじを引く"
+            isDrawn = false
+        } else {
+            isDrawn = true
+            drawButton.text = "もう一度引く"
+        }
     }
 }
