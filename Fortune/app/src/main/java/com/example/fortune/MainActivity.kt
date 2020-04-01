@@ -73,16 +73,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(view: View) {
-        val randomResult = Random().nextInt(FORTUNE_IMAGES.size)
-        fortuneImageView.setImageResource(FORTUNE_IMAGES[randomResult])
+        // 等確率でおみくじを引く
+//        val randomResult = Random().nextInt(FORTUNE_IMAGES.size)
+//        fortuneImageView.setImageResource(FORTUNE_IMAGES[randomResult])
+//
+//        if (isDrawn == true) {
+//            fortuneImageView.setImageResource(R.drawable.omikuji)
+//            drawButton.text = "おみくじを引く"
+//            isDrawn = false
+//        } else {
+//            isDrawn = true
+//            drawButton.text = "もう一度引く"
+//        }
 
+        // 平等ではない確率でおみくじを引く
         if (isDrawn == true) {
-            fortuneImageView.setImageResource(R.drawable.omikuji)
-            drawButton.text = "おみくじを引く"
-            isDrawn = false
+            initialFortune()
         } else {
-            isDrawn = true
-            drawButton.text = "もう一度引く"
+            createFortune()
         }
     }
 }
