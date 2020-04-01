@@ -28,9 +28,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
+
+        //PhotoDetailActivityを使うための変数
+        val photoDetailActivity = PhotoDetailActivity()
+
         when (v?.id) {
             //開くボタン
             R.id.openButton -> {
+                // 写真詳細画面の準備
+                val intent = Intent(this, PhotoDetailActivity::class.java)
+                // 今表示している写真を渡す
+                intent.putExtra(photoDetailActivity.EXTRA_PHOTO_RES_ID, PHOTO_RES_IDS[index])
+                // 今表示している写真の説明文を渡す
+                intent.putExtra(photoDetailActivity.EXTRA_DESCRIPTION_STRING, PHOTO_DESCRIPTIONS[index])
+                // 写真詳細画面を起動する
+                startActivity(intent)
 
             }
 
