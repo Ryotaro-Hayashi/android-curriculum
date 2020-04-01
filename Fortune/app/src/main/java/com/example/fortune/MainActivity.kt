@@ -20,4 +20,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         drawButton.setOnClickListener(this)
     }
+
+    override fun onClick(view: View) {
+
+    }
 }
