@@ -12,5 +12,14 @@ class PhotoDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_photo_detail)
+
+        // 前画面から渡された写真を取得
+        val photoResId = intent.getIntExtra(EXTRA_PHOTO_RES_ID,0)
+        // 前画面から渡された説明文を取得
+        val description = intent.getIntExtra(EXTRA_DESCRIPTION_STRING)
+
+        // 前画面から渡された写真を表示
+        detailPhotoImageView.setImageResource(photoResId)
+        descriptionTextVIew.setText(description)
     }
 }
