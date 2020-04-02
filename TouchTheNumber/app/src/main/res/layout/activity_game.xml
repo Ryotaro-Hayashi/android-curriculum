@@ -130,13 +130,22 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
         app:srcCompat="@drawable/black" />
 
-    <TextView
-        android:id="@+id/countDownView"
-        android:layout_width="match_constraint"
-        android:layout_height="match_constraint"
-        android:background="#3D3D3D "
-        android:text="TextView"
-        tools:layout_editor_absoluteX="190dp"
-        tools:layout_editor_absoluteY="67dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-72dp"
+        tools:layout_editor_absoluteY="56dp">
+
+        <TextView
+            android:id="@+id/countDownView"
+            android:layout_width="240dp"
+            android:layout_height="360dp"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="#FFFFFF"
+            android:textSize="240sp"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="185dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
