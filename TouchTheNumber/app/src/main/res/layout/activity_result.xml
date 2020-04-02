@@ -7,6 +7,53 @@
     android:background="#000000"
     tools:context=".ResultActivity">
 
+    <Button
+        android:id="@+id/topButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/topbtn"
+        android:textSize="40sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="42dp"
+        android:background="@drawable/start"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="61dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/_clear" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        tools:text="time : 0.00" />
+
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="80dp"
