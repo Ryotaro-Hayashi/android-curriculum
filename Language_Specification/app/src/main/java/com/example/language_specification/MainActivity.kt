@@ -11,6 +11,10 @@ class MainActivity : AppCompatActivity() {
 
         // インスタンスを作成
         val car = Car()
-        car.name()
+        // car.name()
+        car.car()
+
+        val bike = Bike()
+        bike.bike()
     }
 }
