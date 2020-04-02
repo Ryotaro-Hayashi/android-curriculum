@@ -130,11 +130,32 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
         app:srcCompat="@drawable/black" />
 
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        tools:layout_editor_absoluteX="110dp"
+        tools:text="time : 0.00" />
+
+    <ImageView
+        android:id="@+id/ImageView"
+        android:layout_width="329dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:srcCompat="@drawable/_clear"
+        tools:layout_editor_absoluteX="41dp" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-165dp"
-        tools:layout_editor_absoluteY="-16dp">
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="91dp">
 
         <TextView
             android:id="@+id/countDownView"
@@ -146,25 +167,6 @@
             android:textSize="240sp"
             tools:layout_editor_absoluteX="85dp"
             tools:layout_editor_absoluteY="185dp" />
-
-        <ImageView
-            android:id="@+id/ImageView"
-            android:layout_width="329dp"
-            android:layout_height="76dp"
-            app:srcCompat="@drawable/_clear"
-            tools:layout_editor_absoluteX="41dp"
-            tools:layout_editor_absoluteY="75dp" />
-
-        <TextView
-            android:id="@+id/resultTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textColor="#FFFFFF"
-            android:textSize="40sp"
-            tools:layout_editor_absoluteX="75dp"
-            tools:layout_editor_absoluteY="592dp"
-            tools:text="time : 0.00" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
