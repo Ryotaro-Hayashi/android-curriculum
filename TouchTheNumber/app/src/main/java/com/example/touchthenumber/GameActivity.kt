@@ -67,6 +67,7 @@ class GameActivity : AppCompatActivity() {
     }
 
     // カウントダウン
+    // countDown(timer: Timer)メソッドを使って、 1秒毎のカウントダウンを行う
     fun countDown(timer: Timer) {
         countDownNumber -= 1
         countDownTextView.text = "$countDownNumber"
@@ -79,18 +80,24 @@ class GameActivity : AppCompatActivity() {
             gameStartedDate = Date()
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+
+        startGame()
+    }
 }
 
-class GameViewController: UIViewController {
-
-    //ボタンの数 (Int)
-    private val numberOfButtons = 9
-    // 音ファイル
-    private val soundNames = listOf(not_right, _do, _re, _mi, _fa, _so, _ra, _shi, _do_, _re_)
-    // 赤のボタン画像
-    private val redButtons = listOf(r1, r2, r3, r4, r5, r6, r7, r8, r9)
-    // 緑のボタン画像
-    private val greenButtons = listOf(g1, g2, g3, g4, g5, g6, g7, g8, g9)
-    // 青のボタン画像
-    private val blueButtons = listOf(b1, b2, b3, b4, b5, b6, b7, b8, b9)
-}
+//class GameViewController: UIViewController {
+//
+//    //ボタンの数 (Int)
+//    private val numberOfButtons = 9
+//    // 音ファイル
+//    private val soundNames = listOf(not_right, _do, _re, _mi, _fa, _so, _ra, _shi, _do_, _re_)
+//    // 赤のボタン画像
+//    private val redButtons = listOf(r1, r2, r3, r4, r5, r6, r7, r8, r9)
+//    // 緑のボタン画像
+//    private val greenButtons = listOf(g1, g2, g3, g4, g5, g6, g7, g8, g9)
+//    // 青のボタン画像
+//    private val blueButtons = listOf(b1, b2, b3, b4, b5, b6, b7, b8, b9)
+//}
