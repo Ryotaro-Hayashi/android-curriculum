@@ -1,7 +1,9 @@
 package com.example.piano
 
+import android.media.SoundPool
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -32,5 +34,22 @@ class MainActivity : AppCompatActivity() {
             Key(black_4, R.raw.piano_a_sharp),
             Key(white_6, R.raw.piano_b),
             Key(white_7, R.raw.piano_c_octave))
+
+        // 各ボタンに音楽再生を配置
+        piano.forEach{
+            playSound(it)
+            // タップ時の操作音をオフにする
+            it.button.isSoundEffectsEnabled = false
+        }
+    }
+
+    // 音が鳴るための関数
+    private fun playSound(key: Key) {
+        // ロード
+        val soundId = soundPool.load(this, key.resource, 1)
+        // 再生
+        key.button.setOnClickListener {
+            soundPool.play(soundId, 1.0f, 1.0f, 0, 0, 1.0f)
+        }
     }
 }
