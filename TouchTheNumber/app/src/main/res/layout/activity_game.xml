@@ -137,7 +137,7 @@
         tools:layout_editor_absoluteY="-101dp">
 
         <TextView
-            android:id="@+id/countDownView"
+            android:id="@+id/countDownTextView"
             android:layout_width="240dp"
             android:layout_height="360dp"
             android:gravity="center"

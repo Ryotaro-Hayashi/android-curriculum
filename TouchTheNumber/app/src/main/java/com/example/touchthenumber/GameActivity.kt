@@ -10,10 +10,6 @@ import android.media.MediaPlayer
 import android.view.View
 import java.util.*
 import android.widget.Button
-import android.util.Log
-import kotlin.random.Random
-import android.content.Intent
-import android.view.animation.*
 
 class GameActivity : AppCompatActivity() {
 
@@ -47,6 +43,41 @@ class GameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //setContentViewをしないとimageViewが読み込まれないため
         setContentView(R.layout.activity_game)
+    }
+
+    //初期状態をセット
+    private fun startGame() {
+        //現在のターゲットのボタンの番号
+        targetNumber = 1
+        //countDownView.visibility = View.VISIBLE      //countDownViewが見える状態にセット
+        //カウントダウンする秒数
+        countDownNumber = 3
+        //現在の秒数をcountDownViewのtextにセット("$変数"で変数の中身を文字列として扱えます)
+        countDownTextView.text = "$countDownNumber"
+
+        val timer = Timer()
+        //schedule(){　(呼び出す処理),(遅らせる時間 ミリ秒),(間隔　ミリ秒)
+        timer.schedule(object : TimerTask() {
+            override fun run() {
+                runOnUiThread {
+                    countDown(timer) //呼び出す処理
+                }
+            }
+        }, 1000, 1000)
+    }
+
+    // カウントダウン
+    fun countDown(timer: Timer) {
+        countDownNumber -= 1
+        countDownTextView.text = "$countDownNumber"
+        if (countDownNumber == 0) {
+            // タイマーを停止します
+            timer.cancel()
+            // カウントダウンを見えなくします
+            countDownTextView.visibility = View.INVISIBLE
+            // 後からゲームクリアにかかった時間を測定するため、現在時刻を代入しておく。
+            gameStartedDate = Date()
+        }
     }
 }
 
