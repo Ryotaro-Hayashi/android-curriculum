@@ -14,6 +14,77 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="bottom"
-            android:orientation="horizontal"></LinearLayout>
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/white_0"
+                android:layout_width="20dp"
+                android:layout_height="385dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_white" />
+
+            <Button
+                android:id="@+id/white_1"
+                android:layout_width="20dp"
+                android:layout_height="385dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_white" />
+
+            <Button
+                android:id="@+id/white_2"
+                android:layout_width="20dp"
+                android:layout_height="385dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_white" />
+
+            <Button
+                android:id="@+id/white_3"
+                android:layout_width="20dp"
+                android:layout_height="385dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_white" />
+
+            <Button
+                android:id="@+id/white_4"
+                android:layout_width="20dp"
+                android:layout_height="385dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_white" />
+
+            <Button
+                android:id="@+id/white_5"
+                android:layout_width="20dp"
+                android:layout_height="385dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_white" />
+
+            <Button
+                android:id="@+id/white_6"
+                android:layout_width="20dp"
+                android:layout_height="385dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_white" />
+
+            <Button
+                android:id="@+id/white_7"
+                android:layout_width="20dp"
+                android:layout_height="385dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_white" />
+
+            <Button
+                android:id="@+id/white_8"
+                android:layout_width="20dp"
+                android:layout_height="385dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_white" />
+
+            <Button
+                android:id="@+id/white_9"
+                android:layout_width="20dp"
+                android:layout_height="385dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_white" />
+        </LinearLayout>
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
