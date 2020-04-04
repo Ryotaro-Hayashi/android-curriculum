@@ -1,0 +1,2 @@
+rootProject.name='TouchTheNumber'
+include ':app'
